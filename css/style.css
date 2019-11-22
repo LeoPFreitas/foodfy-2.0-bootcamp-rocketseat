@@ -101,6 +101,10 @@ section.recips .recipe{
     margin-bottom: 10px;
 }
 
+section.recips .recipe:hover{
+    cursor: pointer;
+}
+
 section.recips .recipe img{
     width: 100%;
     border-radius: 15px;
@@ -220,7 +224,7 @@ section.text-receitas p{
     position: fixed;
     top: 0;
     left: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .modal-overlay .modal {
