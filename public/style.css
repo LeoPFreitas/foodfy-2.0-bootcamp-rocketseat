@@ -216,69 +216,78 @@ section.text-receitas p{
     line-height: 28px;
 }
 
-/* MODAL */
-.modal-overlay{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: hidden;
+/* PAGINA RECEITAS */
+section.receita .img{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.modal-overlay .modal {
-    background-color: white;
-    width: 660px;
-    height: 413px;
-    position: relative;
-    top: calc(50% - 212.5px);
-    left: calc(50% - 330px);
-    border-radius: 16px;
-}
-
-.modal .modal-content img{
-    width: 600px;
-    height: 200px;
+section.receita img{
+    width: 940px;
+    height: 280px;
     border-radius: 15px;
-    margin-left: 30px;
-    margin-top: 30px;
 }
 
-.modal .modal-content h3{
+section.receita .container-author{
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+section.receita .container-author h3{
+    font-size: 36px;
+    line-height: 42px;
+    color: #111111;
+}
+
+section.receita .container-author p{
+    font-size: 20px;
+    line-height: 24px;
+    color: #777777;
+    font-weight: normal;
+}
+
+section.receita .title{
+    margin-bottom: 20px;
+}
+
+section.receita h3{
     font-size: 24px;
-    color: black;
-    line-height: 28px;
-    font-weight: normal;
+    color: #111111;
+    line-height: 28px;  
+    color: #111111;
+    display: inline-block;
+    margin-left: 8px;
+    margin-left: 0;
 }
 
-.modal .modal-content p{
-    text-align: center;
-    margin-top: 5px;
-    font-size: 18px;
-    color: rgba(119,119,119,1);
-    line-height: 21px;
-    font-weight: normal;
-}
-
-.modal .close-modal {
-    text-align: center;
-    margin-top: 60px; 
-}
-
-.modal .close-modal a{
+section.receita a{
     text-decoration: none;
-    color: rgba(153,153,153,1);
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: normal;
+    color: #999999;
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-block;
 }
 
+section.receita .content{ margin-bottom: 39px;}
 
-/* ==== MODAL.ACTIVE ==== */
-.modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
+section.receita .content ul{
+    list-style: disc;
+    list-style-position: inside;
+}
+
+section.receita .content li{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+section.receita .info-adicional p{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    padding-bottom: 15px;
+}
+
+.esconder{
+    visibility: hidden;
 }
