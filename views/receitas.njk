@@ -20,11 +20,11 @@
 
                 <div class="ingredientes">
                     <div class="title">
-                        <h3 class="close">Ingredientes</h3>
-                        <a class="close" href="">Esconder</a>
+                        <h3>Ingredientes</h3>
+                        <span id="ingredientes" class="button">Esconder</span>
                     </div>
 
-                    <div class="content">
+                    <div class="content ingredientes-content">
                         <ul>
                             {% for ingredient in recipe.ingredients %}
                                 <li>{{ingredient}}</li>
@@ -36,10 +36,10 @@
                 <div class="modo-preparo">
                     <div class="title">
                         <h3>Modo de preparo</h3>
-                        <a href="">Mostrar</a>
+                        <span id="modo-preparo" class="button">Esconder</span>
                     </div>
 
-                    <div class="content">
+                    <div class="content modo-preparo-content">
                         <ul>
                             {% for instruction in recipe.preparation %}
                                 <li>{{instruction}}</li>
@@ -52,10 +52,10 @@
 
                     <div class="title">
                         <h3>Informações adicionais</h3>
-                        <a href="">Esconde</a>
+                        <span id="info-adicional" class="button">Esconder</span>
                     </div>
 
-                    <div class="content">
+                    <div class="content info-adicional-content">
 
                         {% for paragaf in recipe.information %}
                             <p>{{paragaf}}</p>
@@ -67,5 +67,7 @@
             </section>
         </div>
     </main>
+
+    <script src="/script.js"></script>
 
 {% endblock %}
