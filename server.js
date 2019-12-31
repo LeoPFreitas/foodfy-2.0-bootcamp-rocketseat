@@ -1,45 +1,24 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+const routes = require('./routes')
+const methodOverride = require('method-override')
 
 const server = express()
-const recipes = require("./data")
 
-// para utililizar arquivos estáticos
-server.use(express.static('public'))
+//Faz funcionar o req.body
+server.use(express.urlencoded({ extended: true }))
+
+server.use(express.static('public')) // para utililizar arquivos estáticos
+server.use(methodOverride('_method'))  // para poder utilizar o put, delete no html5
+server.use(routes) // o use é um middleware
 
 // configurar template engine
 server.set("view engine", 'njk')
 
 nunjucks.configure("views", {
     express: server,
-    noCache: true
-})
-
-// criando a rota
-server.get("/", function (req, res) {
-    return res.render("home", { items: recipes })
-})
-
-// server.get("/receitas", function (req, res) {
-//     return res.render("receitas")
-// })
-
-server.get("/receitas/:index", function (req, res) {
-    const recipeIndex = req.params.index
-
-    const recipe = recipes.find(function (recipe) {
-        return recipe == recipes[recipeIndex]
-    })
-
-    if (!recipe) {
-        return res.send("Not found")
-    }
-
-    return res.render("receitas", { recipe: recipe })
-})
-
-server.get("/sobre", function (req, res) {
-    return res.render("sobre")
+    noCache: true,
+    autoescape: false
 })
 
 server.listen(5000, function () {

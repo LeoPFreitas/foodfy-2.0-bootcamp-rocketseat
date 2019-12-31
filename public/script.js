@@ -1,11 +1,18 @@
 const recipes = document.querySelectorAll('.recipe')
 const buttons = document.getElementsByClassName('button')
 
+// Recipe click event
 for (let recipe of recipes) {
     recipe.addEventListener("click", function () {
         const recipeId = recipe.getAttribute('id')
 
-        window.location.href = `receitas/${recipeId}`
+        const url = window.location.href
+
+        if (url === 'http://localhost:3000/admin/recipes'){
+            window.location.href = `recipes/${recipeId}`
+        } else {
+            window.location.href = `admin/recipes/${recipeId}`
+        }
     })
 }
 
