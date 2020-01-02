@@ -324,3 +324,88 @@ section.receita .info-adicional p{
 .hide{
     display: none;
 }
+
+/* Pagina Editar */
+
+section.editar-receita .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+section.editar-receita .title div button:nth-child(2){
+    margin-left: 30px;
+}
+
+section.editar-receita .title div button.del{
+    background: #DC4747;
+}
+
+section.editar-receita .title p{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+button[type="submit"]{
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    background: #6558C3;
+    border-radius: 4px;
+    border-radius: 4px;
+    height: 37px;
+    width: 139px;
+    border: none;
+}
+
+section.editar-receita .content p{
+    font-size: 16px;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+section.editar-receita .content input{
+    width: 100%;
+    height: 49px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #111111;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+section.editar-receita .content button{
+    font-size: 16px;
+    color: #6558C3;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: none;
+    font-weight: none;
+    cursor: pointer;
+}
+
+section.editar-receita .content textarea{
+    resize: none;
+    width: 100%;
+    height: 257px;
+    border-radius: 4px;
+    border: 1px solid #DDDDDD;
+    font-size: 16px;
+    color: #111111;
+    line-height: 24px;
+    padding: 20px 15px;
+    }
+
+
+
+
+
+
+/* Fim pagina editar */
