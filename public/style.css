@@ -10,6 +10,12 @@
     margin: 0 auto;
 }
 
+.recipe a{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
 /* HEADER */
 
 header nav{
@@ -226,6 +232,33 @@ section.receita img{
     width: 940px;
     height: 280px;
     border-radius: 15px;
+}
+
+section.receita .title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+section.receita .title-container p{
+    font-size: 24px;
+    color: #111111;
+    font-weight: bold;
+    align-content: center;
+} 
+
+section.receita a{
+    background: #6558C3;
+    border-radius: 4px;
+    width: 136px;
+    height: 37px;
+    text-align: center;
+    padding: 9px;
+    color: white;
+    text-decoration: none;
+    line-height: 19px;
+    font-size: 16px;
 }
 
 section.receita .container-author{

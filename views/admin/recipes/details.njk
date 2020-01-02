@@ -10,6 +10,10 @@
 
             <section class="receita">
                 <div class="img">
+                    <div class="title-container">
+                        <p>Receita: {{ recipe.title }}</p>
+                        <a href="/admin/recipes/{{ recipe.id }}/edit">Editar Receita</a>  
+                    </div>
                     <img src="{{recipe.image}}" alt="">
                 </div>
 

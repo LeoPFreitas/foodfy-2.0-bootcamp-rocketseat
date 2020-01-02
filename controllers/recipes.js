@@ -22,6 +22,10 @@ exports.show = function (req, res) {
   return res.render("admin/recipes/details", { recipe: recipe })
 }
 
+// Edit
+exports.edit = function(req, res) {
+  return res.render('admin/recipes/edit')
+}
 // server.get("/receitas/:index", function (req, res) {
 //   const recipeIndex = req.params.index
 
